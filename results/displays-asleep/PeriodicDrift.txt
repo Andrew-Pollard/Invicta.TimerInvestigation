@@ -1,0 +1,10 @@
+Recorded 2026-09-12T23:36:35.6381509+01:00 with the displays asleep.
+
+Relative: re-armed one period after each wake-up
+    interval   n=3269 mean=1.530 p5=1.515 p50=1.530 p95=1.539 max=1.663
+    histogram  1.5:99%
+    3269 wake-ups in 5001 ms, 65.4% of the ticks the period asks for
+Absolute: each tick aimed at start + n periods
+    interval   n=5000 mean=1.001 p5=1.010 p50=1.016 p95=1.025 max=3.971
+    histogram  0.5:3%  1.0:97%
+    5000 wake-ups in 5003 ms, 99.9% of the ticks the period asks for

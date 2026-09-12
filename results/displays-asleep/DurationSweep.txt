@@ -1,0 +1,21 @@
+Recorded 2026-09-12T23:35:44.0849593+01:00 with the displays asleep.
+
+High-resolution timer
+     0.50 ms -> p5=  1.010 p50=  1.014 p95=  1.025 (median 0.514 late) n=986
+     1.00 ms -> p5=  1.518 p50=  1.531 p95=  1.539 (median 0.531 late) n=654
+     1.10 ms -> p5=  1.527 p50=  1.530 p95=  1.538 (median 0.430 late) n=654
+     1.25 ms -> p5=  1.522 p50=  1.529 p95=  1.538 (median 0.279 late) n=654
+     1.50 ms -> p5=  2.024 p50=  2.029 p95=  2.047 (median 0.529 late) n=493
+     1.75 ms -> p5=  2.027 p50=  2.031 p95=  2.048 (median 0.281 late) n=492
+     2.00 ms -> p5=  2.135 p50=  2.591 p95=  3.030 (median 0.591 late) n=367
+     2.30 ms -> p5=  2.528 p50=  2.567 p95=  3.019 (median 0.267 late) n=372
+     5.00 ms -> p5=  5.115 p50=  5.432 p95=  5.790 (median 0.432 late) n=184
+Default-resolution timer
+     1.00 ms -> p5= 15.673 p50= 16.106 p95= 16.452 (median 15.106 late) n=94
+    10.00 ms -> p5= 16.049 p50= 16.109 p95= 16.437 (median 6.109 late) n=93
+    15.00 ms -> p5= 16.039 p50= 16.095 p95= 16.373 (median 1.095 late) n=93
+    15.60 ms -> p5= 16.049 p50= 16.113 p95= 16.450 (median 0.513 late) n=90
+    16.00 ms -> p5= 16.041 p50= 16.152 p95= 31.942 (median 0.152 late) n=86
+    20.00 ms -> p5= 31.748 p50= 32.279 p95= 32.509 (median 12.279 late) n=47
+    31.00 ms -> p5= 32.010 p50= 32.267 p95= 32.545 (median 1.267 late) n=47
+    32.00 ms -> p5= 32.035 p50= 32.310 p95= 32.582 (median 0.310 late) n=46

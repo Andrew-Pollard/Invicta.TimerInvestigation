@@ -1,0 +1,15 @@
+Recorded 2026-09-12T23:34:58.2762920+01:00 with the displays asleep.
+
+Idle: sampled after each Thread.Sleep(1) wake-up
+    counter interval     n=372 mean=16.142 p5=15.940 p50=16.122 p95=16.444 max=16.930
+                         15.5:3%  15.75:5%  16.0:73%  16.25:17%  16.5:1%
+    interrupt-time step  n=372 mean=16.142 p5=15.961 p50=16.112 p95=16.421 max=16.939
+                         15.5:2%  15.75:6%  16.0:73%  16.25:17%  16.5:1%
+    over 6005.0 ms of counter time, interrupt time advanced 6005.0 ms (ratio 1.00000)
+Busy: polled continuously, one sample per change
+    counter interval     n=1085 mean=2.750 p5=1.015 p50=1.741 p95=15.675 max=16.016
+                         1.0:4%  1.5:58%  1.75:13%  2.0:14%  15.5:4%  15.75:1%
+    interrupt-time step  n=1085 mean=2.750 p5=1.015 p50=1.742 p95=15.675 max=16.017
+                         1.0:5%  1.5:59%  2.0:27%  15.5:4%  15.75:1%
+    over 2984.3 ms of counter time, interrupt time advanced 2984.3 ms (ratio 1.00000)
+    finest global timer resolution in effect during the poll 15.625 ms

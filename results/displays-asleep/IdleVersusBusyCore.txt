@@ -1,0 +1,10 @@
+Recorded 2026-09-12T23:35:10.5083020+01:00 with the displays asleep.
+
+Idle logical processor 3
+    Thread.Sleep(1) interval          n=310 mean=16.143 p5=15.813 p50=16.117 p95=16.441 max=17.686
+    1 ms high-resolution timer, late  n=3264 mean=0.532 p5=0.518 p50=0.530 p95=0.538 max=7.690
+    1 ms default timer, late          n=311 mean=15.079 p5=14.939 p50=15.105 p95=15.421 max=15.587
+Busy logical processor 3
+    Thread.Sleep(1) interval          n=318 mean=15.740 p5=15.665 p50=15.694 p95=16.078 max=16.620
+    1 ms high-resolution timer, late  n=3289 mean=0.521 p5=0.511 p50=0.529 p95=0.538 max=0.609
+    1 ms default timer, late          n=318 mean=14.732 p5=14.665 p50=14.693 p95=15.084 max=15.639

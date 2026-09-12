@@ -1,0 +1,22 @@
+Recorded 2026-09-12T23:54:33.6952044+01:00 with the screens on at 180 Hz and a window redrawing on every frame.
+
+Clock increment 15.625 ms; timer resolution 15.625 ms before, finest 0.500 ms
+Thread.Sleep(1)
+    interval   n=609 mean=13.134 p5=5.280 p50=15.683 p95=16.078 max=16.361
+    histogram  3.5:1%  5.0:6%  5.5:11%  11.0:1%  11.5:1%  15.0:2%  15.5:57%  16.0:12%
+    grid       tick R=0.25, fundamental 7.908 ms R=0.33
+Win32 waitable timer, default resolution
+    interval   n=591 mean=13.535 p5=5.373 p50=15.688 p95=16.089 max=16.671
+    histogram  5.0:7%  5.5:10%  15.0:2%  15.5:59%  16.0:15%
+    grid       tick R=0.18, fundamental 5.263 ms R=0.41
+System.Threading.Timer, 1 ms period
+    interval   n=602 mean=13.287 p5=5.249 p50=15.678 p95=16.094 max=16.492
+    histogram  5.0:7%  5.5:9%  15.0:2%  15.5:58%  16.0:13%
+    grid       tick R=0.05, fundamental 7.945 ms R=0.27
+await Task.Delay(1)
+    interval   n=625 mean=12.807 p5=5.271 p50=15.651 p95=16.076 max=16.680
+    histogram  5.0:7%  5.5:10%  6.5:3%  11.0:3%  12.0:3%  13.0:1%  15.0:2%  15.5:54%  16.0:8%
+    grid       tick R=0.07, fundamental 5.555 ms R=0.30
+Clock increment 15.625 ms; timer resolution 15.625 ms after, finest 0.500 ms
+
+The activity window redrew 180 times per second during this run.

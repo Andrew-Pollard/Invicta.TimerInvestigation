@@ -1,0 +1,21 @@
+Recorded 2026-09-12T23:40:49.2424196+01:00 with the screens on at 180 Hz.
+Reconstructed from the run's console output; the original file was deleted by mistake before it was committed.
+
+Clock increment 15.625 ms; timer resolution 15.625 ms before, finest 0.500 ms
+Thread.Sleep(1)
+    interval   n=1162 mean=6.881 p5=5.444 p50=5.585 p95=11.168 max=16.770
+    histogram  5.0:15%  5.5:61%  10.5:1%  11.0:20%
+    grid       tick R=0.00, fundamental 5.555 ms R=0.88
+Win32 waitable timer, default resolution
+    interval   n=978 mean=8.191 p5=5.430 p50=5.617 p95=16.005 max=27.873
+    histogram  5.0:15%  5.5:47%  10.5:1%  11.0:21%  15.5:8%  16.0:3%  16.5:2%
+    grid       tick R=0.04, fundamental 5.555 ms R=0.84
+System.Threading.Timer, 1 ms period
+    interval   n=621 mean=12.871 p5=5.408 p50=15.695 p95=16.098 max=19.452
+    histogram  1.5:1%  5.0:4%  5.5:12%  6.0:1%  7.0:2%  11.0:2%  11.5:2%  12.5:1%  15.5:49%  16.0:15%
+    grid       tick R=0.06, fundamental 5.558 ms R=0.32
+await Task.Delay(1)
+    interval   n=613 mean=13.063 p5=3.141 p50=15.710 p95=16.113 max=21.577
+    histogram  2.0:1%  2.5:2%  5.0:6%  5.5:11%  11.0:2%  15.0:2%  15.5:51%  16.0:17%
+    grid       tick R=0.05, fundamental 15.997 ms R=0.28
+Clock increment 15.625 ms; timer resolution 15.625 ms after, finest 0.500 ms

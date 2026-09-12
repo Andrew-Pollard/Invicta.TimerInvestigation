@@ -1,0 +1,20 @@
+Recorded 2026-09-12T23:36:08.2659243+01:00 with the displays asleep.
+
+1.00 ms, back-to-back
+    late       n=2620 mean=0.526 p5=0.514 p50=0.532 p95=0.546 max=0.561
+    histogram  0.5:99%
+1.00 ms, random start
+    late       n=2397 mean=0.176 p5=0.013 p50=0.016 p95=0.522 max=1.235
+    histogram  0.0:68%  0.5:30%
+1.25 ms, back-to-back
+    late       n=2614 mean=0.280 p5=0.264 p50=0.281 p95=0.296 max=1.467
+    histogram  0.2:98%
+1.25 ms, random start
+    late       n=1953 mean=0.288 p5=0.262 p50=0.264 p95=0.441 max=0.789
+    histogram  0.2:93%  0.7:4%
+5.00 ms, back-to-back
+    late       n=732 mean=0.464 p5=0.093 p50=0.434 p95=0.819 max=0.930
+    histogram  0.0:5%  0.1:2%  0.3:9%  0.4:56%  0.5:12%  0.7:7%  0.8:5%
+5.00 ms, random start
+    late       n=668 mean=0.494 p5=0.218 p50=0.446 p95=0.840 max=1.120
+    histogram  0.0:2%  0.2:2%  0.3:12%  0.4:52%  0.5:10%  0.6:3%  0.7:9%  0.8:7%
