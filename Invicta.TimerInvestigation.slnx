@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/samples/">
+    <Project Path="samples/DurationSweep/DurationSweep.csproj" />
+    <Project Path="samples/IdleVersusBusyCore/IdleVersusBusyCore.csproj" />
+    <Project Path="samples/InterruptTime/InterruptTime.csproj" />
+    <Project Path="samples/PeriodicDrift/PeriodicDrift.csproj" />
+    <Project Path="samples/RandomPhase/RandomPhase.csproj" />
+    <Project Path="samples/WakeGrid/WakeGrid.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Invicta.TimerInvestigation/Invicta.TimerInvestigation.csproj" />
+  </Folder>
+</Solution>
