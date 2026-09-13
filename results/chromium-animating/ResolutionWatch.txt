@@ -1,0 +1,9 @@
+Recorded 2026-09-13T01:53:53.2905580+01:00 with the screens on at 179 Hz and animation.html open in Edge (mode both).
+
+4714 changes of the global timer resolution in 4.0 s
+      1.000 ms resolution for 8.92% of the time
+     15.625 ms resolution for 91.08% of the time
+    finer spells, ms  n=2357 mean=0.151 p5=0.007 p50=0.045 p95=0.178 max=6.103
+    gaps between spells, ms  n=2356 mean=1.691 p5=0.021 p50=0.212 p95=5.292 max=6.112
+
+The page animated at 187 frames per second during this run.

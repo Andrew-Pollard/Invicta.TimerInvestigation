@@ -1,0 +1,4 @@
+Recorded 2026-09-13T01:54:27.1807981+01:00 with the screens on at 179 Hz and animation.html open in Edge (mode static).
+
+0 changes of the global timer resolution in 4.0 s
+     15.625 ms resolution for 100.00% of the time

@@ -1,0 +1,145 @@
+===== desktop (16.3 s)
+WakeGrid threads readied: 2670; what preceded them on the same processor, most recent first:
+     37.5%  interrupt context: timer expiration <- timer expiration <- timer expiration
+     15.7%  interrupt context: PerfInfo opcode 85 <- idle exit
+     12.1%  interrupt context: DPC ntoskrnl.exe <- PerfInfo opcode 101 <- idle exit
+     10.4%  interrupt context: PerfInfo opcode 85 <- PerfInfo opcode 87 <- idle exit
+      4.9%  interrupt context: PerfInfo opcode 85 <- idle exit <- idle enter
+      4.0%  interrupt context: DPC ntoskrnl.exe <- PerfInfo opcode 101 <- DPC ntoskrnl.exe
+Interrupts per second:
+        21.4  dxgkrnl.sys vector 87
+         6.1  storport.sys vector 129
+         3.1  Wdf01000.sys vector 167
+         2.5  Wdf01000.sys vector 151
+         0.9  storport.sys vector 113
+         0.4  Wdf01000.sys vector 102
+         0.3  Wdf01000.sys vector 182
+         0.1  Wdf01000.sys vector 150
+DPCs per second:
+       380.5  DPC ntoskrnl.exe
+        42.2  DPC nvlddmkm.sys
+         8.6  DPC dxgkrnl.sys
+         7.0  DPC stornvme.sys
+         6.5  DPC Wdf01000.sys
+         5.2  DPC storport.sys
+Timers set by WakeGrid threads: 257
+    due time minus time set, ms       n=257 mean=31.816 p5=0.950 p50=0.982 p95=1.023 max=999.771
+    due time modulo 15.625 ms, ms    n=257 mean=7.631 p5=0.826 p50=7.252 p95=14.928 max=15.613
+    expiry minus due time, ms         n=257 mean=14.934 p5=14.716 p50=15.058 p95=15.376 max=15.578
+
+===== mouse-moving (16.3 s)
+WakeGrid threads readied: 2715; what preceded them on the same processor, most recent first:
+     37.7%  interrupt context: timer expiration <- timer expiration <- timer expiration
+      7.8%  interrupt context: PerfInfo opcode 85 <- PerfInfo opcode 87 <- idle exit
+      7.3%  interrupt context: PerfInfo opcode 85 <- DPC ntoskrnl.exe <- PerfInfo opcode 101
+      7.0%  interrupt context: DPC ntoskrnl.exe <- PerfInfo opcode 101 <- idle exit
+      6.6%  interrupt context: PerfInfo opcode 85 <- idle exit <- idle enter
+      6.2%  interrupt context: PerfInfo opcode 85 <- idle exit
+Interrupts per second:
+       123.4  Wdf01000.sys vector 118
+        21.7  dxgkrnl.sys vector 87
+         6.1  storport.sys vector 129
+         2.3  Wdf01000.sys vector 167
+         1.7  Wdf01000.sys vector 151
+         0.7  storport.sys vector 113
+         0.4  Wdf01000.sys vector 166
+         0.3  Wdf01000.sys vector 182
+DPCs per second:
+       344.5  DPC ntoskrnl.exe
+       128.4  DPC Wdf01000.sys
+        42.3  DPC nvlddmkm.sys
+         8.6  DPC dxgkrnl.sys
+         6.8  DPC stornvme.sys
+         4.4  DPC storport.sys
+Timers set by WakeGrid threads: 261
+    due time minus time set, ms       n=261 mean=33.587 p5=0.956 p50=1.018 p95=1.042 max=999.598
+    due time modulo 15.625 ms, ms    n=261 mean=7.399 p5=0.499 p50=7.162 p95=14.660 max=15.548
+    expiry minus due time, ms         n=261 mean=14.680 p5=14.580 p50=14.955 p95=15.330 max=15.600
+
+===== silent-audio (16.3 s)
+WakeGrid threads readied: 2700; what preceded them on the same processor, most recent first:
+     37.9%  interrupt context: timer expiration <- timer expiration <- timer expiration
+     13.9%  interrupt context: PerfInfo opcode 85 <- idle exit <- idle enter
+     11.8%  interrupt context: idle exit
+      9.1%  interrupt context: PerfInfo opcode 85 <- PerfInfo opcode 87 <- idle exit
+      6.9%  interrupt context: PerfInfo opcode 85 <- idle exit
+      2.3%  interrupt context: DPC ntoskrnl.exe <- PerfInfo opcode 101 <- idle exit
+Interrupts per second:
+        46.9  Wdf01000.sys vector 102
+        32.8  Wdf01000.sys vector 86
+        22.0  dxgkrnl.sys vector 87
+        13.2  Wdf01000.sys vector 150
+         5.6  storport.sys vector 129
+         5.2  Wdf01000.sys vector 167
+         2.9  Wdf01000.sys vector 151
+         0.7  Wdf01000.sys vector 118
+DPCs per second:
+       242.1  DPC ntoskrnl.exe
+       101.8  DPC Wdf01000.sys
+        43.3  DPC nvlddmkm.sys
+         8.8  DPC dxgkrnl.sys
+         6.0  DPC stornvme.sys
+         4.1  DPC storport.sys
+Timers set by WakeGrid threads: 259
+    due time minus time set, ms       n=259 mean=27.969 p5=0.976 p50=1.008 p95=1.040 max=999.890
+    due time modulo 15.625 ms, ms    n=259 mean=8.044 p5=0.893 p50=8.094 p95=15.092 max=15.576
+    expiry minus due time, ms         n=259 mean=14.653 p5=14.114 p50=14.907 p95=15.377 max=15.768
+
+===== redraw-every-frame (16.2 s)
+WakeGrid threads readied: 2634; what preceded them on the same processor, most recent first:
+     39.6%  interrupt context: timer expiration <- timer expiration <- timer expiration
+     14.3%  interrupt context: PerfInfo opcode 85 <- DPC ntoskrnl.exe <- PerfInfo opcode 101
+      7.6%  interrupt context: PerfInfo opcode 85 <- idle exit
+      6.5%  interrupt context: PerfInfo opcode 84 <- idle exit
+      4.1%  interrupt context: PerfInfo opcode 84 <- idle exit <- idle enter
+      3.9%  interrupt context: PerfInfo opcode 85 <- PerfInfo opcode 84 <- DPC ntoskrnl.exe
+Interrupts per second:
+       917.1  dxgkrnl.sys vector 87
+        12.2  storport.sys vector 129
+         3.4  Wdf01000.sys vector 167
+         2.8  storport.sys vector 113
+         2.3  Wdf01000.sys vector 151
+         0.4  Wdf01000.sys vector 118
+         0.3  Wdf01000.sys vector 182
+         0.1  Wdf01000.sys vector 86
+DPCs per second:
+      1759.5  DPC nvlddmkm.sys
+       562.5  DPC dxgkrnl.sys
+       350.1  DPC ntoskrnl.exe
+        15.0  DPC stornvme.sys
+        12.4  DPC storport.sys
+         6.6  DPC Wdf01000.sys
+Timers set by WakeGrid threads: 262
+    due time minus time set, ms       n=262 mean=31.470 p5=1.018 p50=1.037 p95=1.052 max=1000.058
+    due time modulo 15.625 ms, ms    n=262 mean=8.056 p5=0.632 p50=8.217 p95=15.207 max=15.613
+    expiry minus due time, ms         n=262 mean=14.632 p5=14.572 p50=14.704 p95=15.034 max=15.066
+
+===== displays-asleep (16.3 s)
+WakeGrid threads readied: 2694; what preceded them on the same processor, most recent first:
+     37.4%  interrupt context: timer expiration <- timer expiration <- timer expiration
+     15.1%  interrupt context: PerfInfo opcode 85 <- idle exit <- idle enter
+     14.1%  interrupt context: PerfInfo opcode 85 <- PerfInfo opcode 87 <- idle exit
+     11.9%  interrupt context: DPC ntoskrnl.exe <- PerfInfo opcode 101 <- idle exit
+      4.7%  interrupt context: DPC ntoskrnl.exe <- PerfInfo opcode 101 <- DPC ntoskrnl.exe
+      3.4%  interrupt context: PerfInfo opcode 85 <- PerfInfo opcode 84 <- DPC ntoskrnl.exe
+Interrupts per second:
+         8.0  storport.sys vector 129
+         4.9  dxgkrnl.sys vector 87
+         2.1  Wdf01000.sys vector 167
+         1.3  Wdf01000.sys vector 151
+         0.4  storport.sys vector 113
+         0.2  Wdf01000.sys vector 182
+         0.1  Wdf01000.sys vector 150
+         0.1  Wdf01000.sys vector 86
+DPCs per second:
+       395.2  DPC ntoskrnl.exe
+         9.8  DPC nvlddmkm.sys
+         8.4  DPC stornvme.sys
+         6.0  DPC storport.sys
+         3.9  DPC Wdf01000.sys
+         2.7  DPC tcpip.sys
+Timers set by WakeGrid threads: 259
+    due time minus time set, ms       n=259 mean=33.800 p5=0.943 p50=0.980 p95=1.033 max=999.996
+    due time modulo 15.625 ms, ms    n=259 mean=7.994 p5=0.914 p50=7.837 p95=15.093 max=15.568
+    expiry minus due time, ms         n=259 mean=14.827 p5=14.684 p50=15.067 p95=15.383 max=15.930
+

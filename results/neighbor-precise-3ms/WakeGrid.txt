@@ -1,0 +1,22 @@
+Recorded 2026-09-13T01:43:34.2508733+01:00 with the displays asleep and 'TimerNeighbor precise 18 3' running alongside.
+
+Clock increment 15.625 ms; timer resolution 15.625 ms before, finest 0.500 ms
+Thread.Sleep(1)
+    interval   n=188 mean=16.001 p5=15.307 p50=16.080 p95=16.789 max=17.009
+    histogram  15.0:11%  15.5:32%  16.0:47%  16.5:9%
+    grid       tick R=0.08, fundamental 16.015 ms R=0.95
+Win32 waitable timer, default resolution
+    interval   n=189 mean=15.872 p5=15.191 p50=15.906 p95=16.263 max=16.940
+    histogram  15.0:16%  15.5:44%  16.0:37%  16.5:3%
+    grid       tick R=0.22, fundamental 15.957 ms R=0.67
+System.Threading.Timer, 1 ms period
+    interval   n=187 mean=15.906 p5=15.206 p50=15.941 p95=16.458 max=16.674
+    histogram  15.0:12%  15.5:47%  16.0:37%  16.5:4%
+    grid       tick R=0.13, fundamental 15.917 ms R=0.92
+await Task.Delay(1)
+    interval   n=189 mean=15.923 p5=15.386 p50=15.986 p95=16.249 max=16.936
+    histogram  15.0:6%  15.5:44%  16.0:48%  16.5:2%
+    grid       tick R=0.10, fundamental 15.932 ms R=0.94
+Clock increment 15.625 ms; timer resolution 15.625 ms after, finest 0.500 ms
+
+TimerNeighbor: woke on a high-resolution timer 5999 times, every 3 ms

@@ -1,0 +1,18 @@
+Clock increment 15.625 ms; timer resolution 15.625 ms before, finest 0.500 ms
+Thread.Sleep(1)
+    interval   n=251 mean=15.963 p5=15.287 p50=16.002 p95=16.452 max=16.572
+    histogram  15.0:10%  15.5:40%  16.0:48%  16.5:2%
+    grid       tick R=0.05, fundamental 15.992 ms R=0.79
+Win32 waitable timer, default resolution
+    interval   n=251 mean=15.931 p5=15.266 p50=15.971 p95=16.456 max=16.827
+    histogram  15.0:8%  15.5:45%  16.0:45%  16.5:3%
+    grid       tick R=0.05, fundamental 15.915 ms R=0.84
+System.Threading.Timer, 1 ms period
+    interval   n=252 mean=15.909 p5=15.280 p50=15.941 p95=16.423 max=16.760
+    histogram  15.0:9%  15.5:48%  16.0:39%  16.5:3%
+    grid       tick R=0.05, fundamental 15.900 ms R=0.91
+await Task.Delay(1)
+    interval   n=251 mean=15.878 p5=15.237 p50=15.881 p95=16.393 max=17.139
+    histogram  15.0:12%  15.5:51%  16.0:34%  16.5:3%
+    grid       tick R=0.09, fundamental 15.872 ms R=0.93
+Clock increment 15.625 ms; timer resolution 15.625 ms after, finest 0.500 ms

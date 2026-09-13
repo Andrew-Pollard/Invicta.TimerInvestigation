@@ -1,0 +1,22 @@
+Recorded 2026-09-13T01:53:40.4731639+01:00 with the screens on at 179 Hz and animation.html open in Edge (mode both).
+
+Clock increment 15.625 ms; timer resolution 15.625 ms before, finest 0.500 ms
+Thread.Sleep(1)
+    interval   n=521 mean=5.759 p5=5.487 p50=5.556 p95=5.645 max=16.655
+    histogram  5.0:8%  5.5:88%  11.0:2%
+    grid       tick R=0.01, fundamental 5.558 ms R=0.98
+Win32 waitable timer, default resolution
+    interval   n=521 mean=5.748 p5=5.493 p50=5.556 p95=5.669 max=16.581
+    histogram  5.0:6%  5.5:90%  11.0:3%
+    grid       tick R=0.01, fundamental 5.555 ms R=0.99
+System.Threading.Timer, 1 ms period
+    interval   n=520 mean=5.766 p5=5.489 p50=5.556 p95=5.681 max=16.643
+    histogram  5.0:7%  5.5:89%  11.0:3%
+    grid       tick R=0.02, fundamental 5.555 ms R=0.99
+await Task.Delay(1)
+    interval   n=529 mean=5.670 p5=5.490 p50=5.555 p95=5.637 max=16.634
+    histogram  5.0:7%  5.5:91%  11.0:2%
+    grid       tick R=0.00, fundamental 5.555 ms R=0.99
+Clock increment 15.625 ms; timer resolution 15.625 ms after, finest 0.500 ms
+
+The page animated at 178 frames per second during this run.

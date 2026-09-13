@@ -1,0 +1,22 @@
+Recorded 2026-09-13T01:46:06.1120512+01:00 with the displays asleep and 'TimerNeighbor toggle 18 7' running alongside.
+
+Clock increment 15.625 ms; timer resolution 15.625 ms before, finest 0.500 ms
+Thread.Sleep(1)
+    interval   n=429 mean=7.001 p5=6.526 p50=7.029 p95=7.383 max=8.617
+    histogram  6.0:3%  6.5:26%  7.0:67%  7.5:2%
+    grid       tick R=0.00, fundamental 7.000 ms R=0.98
+Win32 waitable timer, default resolution
+    interval   n=428 mean=7.001 p5=6.521 p50=7.030 p95=7.511 max=8.600
+    histogram  6.0:2%  6.5:26%  7.0:65%  7.5:5%
+    grid       tick R=0.00, fundamental 7.000 ms R=0.97
+System.Threading.Timer, 1 ms period
+    interval   n=429 mean=6.990 p5=6.568 p50=7.071 p95=7.293 max=8.512
+    histogram  6.0:2%  6.5:23%  7.0:71%  7.5:3%
+    grid       tick R=0.00, fundamental 7.000 ms R=0.98
+await Task.Delay(1)
+    interval   n=428 mean=7.000 p5=6.560 p50=7.079 p95=7.304 max=8.701
+    histogram  6.0:2%  6.5:27%  7.0:67%  7.5:3%
+    grid       tick R=0.00, fundamental 7.000 ms R=0.98
+Clock increment 15.625 ms; timer resolution 15.625 ms after, finest 0.500 ms
+
+TimerNeighbor: raised and lowered the timer resolution 2572 times, every 7 ms
