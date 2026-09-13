@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- © 2026 Andrew Pollard. All rights reserved. -->
+<!-- Licensed under the MIT License. -->
 <WindowsPerformanceRecorder Version="1.0" Author="Invicta.TimerInvestigation">
   <Profiles>
     <SystemCollector Id="TimerWakeUps.SystemCollector" Name="NT Kernel Logger">

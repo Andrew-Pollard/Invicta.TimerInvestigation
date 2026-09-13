@@ -299,6 +299,11 @@ dotnet run -c Release --project tools/TimerTraceAnalysis -- $env:TEMP\timer-trac
 - [MessagePump timer resolution][chromium-pump] and [time_win.cc][chromium-time], on when Chromium raises the
   timer resolution.
 
+## Licence
+
+Released under the [MIT License][license]. The repository configuration files are based on other projects'; their
+notices are in [THIRD-PARTY-NOTICES.md][notices].
+
 [wake-grid]: samples/WakeGrid/Program.cs
 [idle-busy]: samples/IdleVersusBusyCore/Program.cs
 [interrupt-time]: samples/InterruptTime/Program.cs
@@ -328,3 +333,5 @@ dotnet run -c Release --project tools/TimerTraceAnalysis -- $env:TEMP\timer-trac
 [great-rule-change]: https://randomascii.wordpress.com/2020/10/04/windows-timer-resolution-the-great-rule-change/
 [chromium-pump]: https://groups.google.com/a/chromium.org/g/scheduler-dev/c/eK5-9yNZ-Og/m/WzyjMraQBwAJ
 [chromium-time]: https://github.com/adobe/chromium/blob/master/base/time_win.cc
+[license]: LICENSE
+[notices]: THIRD-PARTY-NOTICES.md
