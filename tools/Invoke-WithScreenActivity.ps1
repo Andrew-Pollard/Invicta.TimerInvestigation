@@ -2,12 +2,12 @@
 
 <#
 .SYNOPSIS
-Runs samples while a small window redraws on every frame, so timers follow the display's refresh rate.
+Runs samples while a small, non-Chromium window redraws on every frame.
 
 .DESCRIPTION
-Timers only follow the display's refresh rate while something on screen changes on every frame. This script opens
-a small, always-on-top window whose counter redraws once per composition frame, runs each sample in turn with its
-output written to a file, then closes the window.
+A control for Invoke-WithChromiumAnimation.ps1: the screen changes on every frame, but nothing changes the timer
+resolution. This script opens a small, always-on-top window whose counter redraws once per composition frame, runs
+each sample in turn with its output written to a file, then closes the window.
 
 The window paces itself with DwmFlush rather than a timer, so it does not change the global timer resolution, and
 it does not flash. While it is open it also asks Windows to keep the displays on, because a run lasts longer than
@@ -20,14 +20,13 @@ The names of the sample projects to run, such as WakeGrid.
 The directory to write each sample's output to, as <Sample>.txt.
 
 .PARAMETER RedrawInterval
-Redraw on a Windows Forms timer with this interval in milliseconds, instead of on every frame. A 15 ms interval
-keeps the screen changing often enough for Windows to leave VSync interrupts running, but not on every frame.
+Redraw on a Windows Forms timer with this interval in milliseconds, instead of on every frame.
 
 .EXAMPLE
-tools\Invoke-WithScreenActivity.ps1 -Sample WakeGrid -OutputDirectory results\screens-on-120hz
+tools\Invoke-WithScreenActivity.ps1 -Sample WakeGrid -OutputDirectory results\redraw-every-frame-180hz
 
 .EXAMPLE
-tools\Invoke-WithScreenActivity.ps1 -Sample WakeGrid -OutputDirectory results\screens-on-180hz-redraw-15ms -RedrawInterval 15
+tools\Invoke-WithScreenActivity.ps1 -Sample WakeGrid -OutputDirectory results\redraw-15ms-180hz -RedrawInterval 15
 #>
 [CmdletBinding()]
 param(

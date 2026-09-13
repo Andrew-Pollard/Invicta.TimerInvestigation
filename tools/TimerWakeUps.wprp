@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2026 Andrew Pollard. All rights reserved. -->
+<WindowsPerformanceRecorder Version="1.0" Author="Invicta.TimerInvestigation">
+  <Profiles>
+    <SystemCollector Id="TimerWakeUps.SystemCollector" Name="NT Kernel Logger">
+      <BufferSize Value="1024" />
+      <Buffers Value="256" />
+    </SystemCollector>
+
+    <SystemProvider Id="TimerWakeUps.SystemProvider">
+      <Keywords>
+        <Keyword Value="ProcessThread" />
+        <Keyword Value="Loader" />
+        <Keyword Value="CSwitch" />
+        <Keyword Value="ReadyThread" />
+        <Keyword Value="Interrupt" />
+        <Keyword Value="DPC" />
+        <Keyword Value="DPCQueue" />
+        <Keyword Value="IdleStates" />
+        <Keyword Value="Timer" />
+        <Keyword Value="ClockInterrupt" />
+        <Keyword Value="KeClock" />
+        <Keyword Value="InterProcessorInterrupt" />
+      </Keywords>
+    </SystemProvider>
+
+    <Profile Id="TimerWakeUps.Verbose.File" Name="TimerWakeUps" Description="Interrupts, DPCs, timers and thread wake-ups" LoggingMode="File" DetailLevel="Verbose">
+      <Collectors>
+        <SystemCollectorId Value="TimerWakeUps.SystemCollector">
+          <SystemProviderId Value="TimerWakeUps.SystemProvider" />
+        </SystemCollectorId>
+      </Collectors>
+    </Profile>
+  </Profiles>
+</WindowsPerformanceRecorder>

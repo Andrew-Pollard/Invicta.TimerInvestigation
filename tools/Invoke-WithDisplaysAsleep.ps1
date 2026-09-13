@@ -5,24 +5,32 @@
 Runs samples with the displays asleep, announcing each step aloud.
 
 .DESCRIPTION
-Display refresh interrupts change when timers are serviced, so measurements of the system tick are only clean
-while nothing is being drawn. This script builds the solution, puts the displays to sleep, runs each sample in
-turn with its output written to a file, then wakes the displays. Progress is spoken because the screens are off.
+Animating applications, such as Chromium-based browsers and apps, change the timer resolution many times a second,
+and each change makes every process's overdue timers fire. With the displays asleep nothing animates, so this is
+the cleanest condition for measuring timers. The script builds the solution, puts the displays to sleep, runs each
+sample in turn with its output written to a file, then wakes the displays. Progress is spoken because the screens
+are off.
 
 Any mouse or keyboard input wakes the displays and spoils the run.
 
 .PARAMETER Sample
-The names of the sample projects to run, such as WakeGrid.
+The sample projects to run, each optionally followed by its arguments, such as 'WakeGrid 3'.
 
 .PARAMETER OutputDirectory
 The directory to write each sample's output to, as <Sample>.txt.
 
+.PARAMETER Companion
+Another sample, with its arguments, to start two seconds before each sample and wait for afterwards, such as
+'TimerNeighbor toggle 20 3'. Its output is appended to the sample's file.
+
 .PARAMETER SettleSeconds
-How long to wait after the displays go to sleep before the first sample starts. Windows stops VSync interrupts
-after ten idle frames, so a few seconds is ample.
+How long to wait after the displays go to sleep before the first sample starts.
 
 .EXAMPLE
 tools\Invoke-WithDisplaysAsleep.ps1 -Sample WakeGrid, DurationSweep -OutputDirectory results\displays-asleep
+
+.EXAMPLE
+tools\Invoke-WithDisplaysAsleep.ps1 -Sample 'WakeGrid 3' -Companion 'TimerNeighbor toggle 20 3' -OutputDirectory results\neighbor-toggle-3ms
 #>
 [CmdletBinding()]
 param(
@@ -31,6 +39,8 @@ param(
 
     [Parameter(Mandatory)]
     [string] $OutputDirectory,
+
+    [string] $Companion,
 
     [int] $SettleSeconds = 10
 )
@@ -68,23 +78,42 @@ $voice.Speak("Putting the displays to sleep to run $($Sample.Count) $noun. Pleas
 Write-Timestamped 'Displays sent to sleep.'
 Start-Sleep -Seconds $SettleSeconds
 
+$utf8 = New-Object Text.UTF8Encoding $false
 $failed = @()
-foreach ($name in $Sample) {
+foreach ($entry in $Sample) {
+    $name, $arguments = $entry -split ' ', 2
     $voice.Speak("Running $name.")
     $project = Join-Path $repositoryRoot "samples\$name"
     $file = Join-Path $outputPath "$name.txt"
-    $header = "Recorded $(Get-Date -Format o) with the displays asleep.`r`n`r`n"
-    [IO.File]::WriteAllText($file, $header, (New-Object Text.UTF8Encoding $false))
+    $alongside = if ($Companion) { " and '$Companion' running alongside" } else { '' }
+    $header = "Recorded $(Get-Date -Format o) with the displays asleep$alongside.`r`n`r`n"
+    [IO.File]::WriteAllText($file, $header, $utf8)
 
-    Write-Timestamped "Running $name."
+    $companionProcess = $null
+    $companionOutput = Join-Path $outputPath "$name.companion.tmp"
+    if ($Companion) {
+        $companionName, $companionArguments = $Companion -split ' ', 2
+        $companionProject = Join-Path $repositoryRoot "samples\$companionName"
+        $companionProcess = Start-Process -FilePath 'dotnet' -NoNewWindow -PassThru -RedirectStandardOutput $companionOutput `
+            -ArgumentList "run -c Release --no-build --project `"$companionProject`" -- $companionArguments"
+        Start-Sleep -Seconds 2
+    }
+
+    Write-Timestamped "Running $entry."
     # cmd does the redirection, so Windows PowerShell neither re-encodes the output nor treats stderr as errors.
     $ErrorActionPreference = 'Continue'
-    cmd /c "dotnet run -c Release --no-build --project `"$project`" >> `"$file`" 2>&1"
+    cmd /c "dotnet run -c Release --no-build --project `"$project`" -- $arguments >> `"$file`" 2>&1"
     $exitCode = $LASTEXITCODE
     $ErrorActionPreference = 'Stop'
     Write-Timestamped "$name finished with exit code $exitCode."
     if ($exitCode -ne 0) {
         $failed += $name
+    }
+
+    if ($companionProcess) {
+        $companionProcess.WaitForExit()
+        [IO.File]::AppendAllText($file, "`r`n" + [IO.File]::ReadAllText($companionOutput), $utf8)
+        Remove-Item -LiteralPath $companionOutput
     }
 }
 
